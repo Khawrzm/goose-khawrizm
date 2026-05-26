@@ -1,0 +1,70 @@
+{
+  "name": "goose-khawrizm",
+  "version": "0.1.0",
+  "description": "Sovereign AI Extension - Arabic-First Intelligence with Zero Big Tech Dependencies",
+  "author": "KHAWRIZM Contributors",
+  "homepage": "https://github.com/Khawrzm/goose-khawrizm",
+  "license": "Apache-2.0",
+  "goose_version": ">=0.9.0",
+  "main": "src/__init__.py",
+  "tools": [
+    {
+      "name": "process_arabic_intent",
+      "description": "استخراج النوايا من النص العربي محلياً باستخدام SARC",
+      "parameters": {
+        "text": {
+          "type": "string",
+          "description": "النص العربي المراد معالجته",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "sense_environment",
+      "description": "استشعار البيئة المحيطة باستخدام EchoWall (Wi-Fi CSI + صوتيات)",
+      "parameters": {
+        "mode": {
+          "type": "string",
+          "description": "وضع الاستشعار: 'live' أو 'sim'",
+          "default": "sim"
+        }
+      }
+    },
+    {
+      "name": "verify_sovereignty",
+      "description": "التحقق من عدم وجود اعتماديات على Big Tech في الكود",
+      "parameters": {
+        "path": {
+          "type": "string",
+          "description": "المسار المراد فحصه",
+          "default": "."
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "python": ">=3.10",
+    "packages": [
+      "numpy>=1.26",
+      "torch>=2.0"
+    ]
+  },
+  "sovereignty": {
+    "zero_cloud": true,
+    "zero_telemetry": true,
+    "offline_capable": true,
+    "big_tech_free": true,
+    "verified": false
+  },
+  "keywords": [
+    "arabic",
+    "sovereignty",
+    "offline",
+    "privacy",
+    "zero-trust",
+    "echowall",
+    "niyah",
+    "khawrizm",
+    "no-big-tech"
+  ]
+}

@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goose-khawrizm"
+version = "0.1.0"
+description = "Sovereign AI Extension for Goose - Arabic-First Intelligence with Zero Big Tech"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "KHAWRIZM Contributors", email = "contributors@khawrizm.dev" }
+]
+keywords = [
+    "goose",
+    "arabic",
+    "sovereignty",
+    "offline",
+    "privacy",
+    "echowall",
+    "niyah",
+    "khawrizm",
+    "no-big-tech",
+    "ai",
+    "nlp"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.3",
+    "mypy>=1.8",
+]
+full = [
+    "torch>=2.0",  # For full Niyah Engine integration
+]
+
+[project.urls]
+Homepage = "https://github.com/Khawrzm/goose-khawrizm"
+Repository = "https://github.com/Khawrzm/goose-khawrizm"
+Issues = "https://github.com/Khawrzm/goose-khawrizm/issues"
+Documentation = "https://github.com/Khawrzm/goose-khawrizm/blob/main/README.md"
+"Parent Project" = "https://github.com/Khawrzm/echowall"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "W", "I", "N"]
+ignore = ["E501"]  # Line too long (handled by formatter)
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false  # Keep it simple for now
