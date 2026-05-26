@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪿 Goose × KHAWRIZM - Demo مباشر</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #b8c1ff;
+        }
+        
+        .demo-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-right: 4px solid #667eea;
+            padding-right: 15px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #e0e0e0;
+            font-size: 1.1em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-right: 3px solid #667eea;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .result.show {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .root-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.95em;
+        }
+        
+        .predicate-tag {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.3);
+            border: 2px solid #4caf50;
+            color: #4caf50;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+        
+        .entity-tag {
+            display: inline-block;
+            background: rgba(255, 193, 7, 0.3);
+            border: 2px solid #ffc107;
+            color: #ffc107;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.95em;
+        }
+        
+        .stat {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
+            color: #b8c1ff;
+        }
+        
+        .stat-value {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin: 5px 5px 5px 0;
+        }
+        
+        .examples {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .example {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .example:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🪿 Goose × KHAWRIZM</h1>
+            <p class="subtitle">Demo مباشر: معالجة النوايا العربية محلياً</p>
+            <div style="margin-top: 15px;">
+                <span class="badge">✅ Zero Big Tech</span>
+                <span class="badge">✅ يعمل بدون إنترنت</span>
+                <span class="badge">✅ معالجة محلية فقط</span>
+            </div>
+        </header>
+        
+        <div class="demo-section">
+            <h2>جرّب الآن - استخراج الجذور العربية</h2>
+            <p style="margin-bottom: 15px; color: #b8c1ff;">
+                اكتب أي جملة عربية وشاهد كيف يستخرج النظام الجذور والنوايا محلياً (بدون استدعاء API!)
+            </p>
+            
+            <textarea id="inputText" placeholder="مثال: أريد بناء نظام استشعار ذكي للمنزل">أريد بناء نظام استشعار ذكي للمنزل</textarea>
+            
+            <button onclick="processIntent()">🔍 استخراج النوايا</button>
+            
+            <div class="examples">
+                <strong>أمثلة سريعة (اضغط للتجربة):</strong>
+                <div class="example" onclick="tryExample('بناء نظام استشعار للحركة')">بناء نظام استشعار للحركة</div>
+                <div class="example" onclick="tryExample('كتابة تقرير ذكي عن المنزل')">كتابة تقرير ذكي عن المنزل</div>
+                <div class="example" onclick="tryExample('استشعار حركة الأشخاص بدون كاميرات')">استشعار حركة الأشخاص بدون كاميرات</div>
+            </div>
+            
+            <div id="result" class="result">
+                <h3 style="color: #667eea; margin-bottom: 15px;">النتائج:</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>الجذور الثلاثية المستخرجة:</strong>
+                    <div id="roots"></div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>المحمولات المنطقية (Predicates):</strong>
+                    <div id="predicates"></div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong>الكيانات المستخرجة:</strong>
+                    <div id="entities"></div>
+                </div>
+                
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <span class="stat">الثقة: <span class="stat-value" id="confidence">0%</span></span>
+                    <span class="stat">الكلمات: <span class="stat-value" id="wordCount">0</span></span>
+                    <span class="stat">استدعاءات Big Tech: <span class="stat-value" style="color: #4caf50;" id="apiCalls">0 ✅</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>كيف يعمل النظام؟</h2>
+            <ol style="line-height: 2; color: #b8c1ff;">
+                <li>يستخرج الكلمات العربية من النص</li>
+                <li>يحلل كل كلمة إلى جذرها الثلاثي (ب-ن-ي، ش-ع-ر، إلخ)</li>
+                <li>يربط كل جذر بمحمول منطقي (BUILD، SENSE، إلخ)</li>
+                <li>يستخرج الكيانات (منزل، نظام، إلخ)</li>
+                <li><strong>كل شي يحصل محلياً - صفر استدعاءات خارجية!</strong></li>
+            </ol>
+        </div>
+        
+        <footer>
+            <p>بُني في الرياض 🇸🇦 مع Goose 🪿</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/Khawrzm/goose-khawrizm" target="_blank">📦 GitHub</a> |
+                <a href="https://github.com/Khawrzm/echowall" target="_blank">🏴‍☠️ KHAWRIZM Project</a>
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #666;">
+                "They built cages of convenience and called them clouds.<br>
+                We built keys of mathematics and called them freedom."
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // قاعدة بيانات الجذور المبسطة (نفس المنطق من src/tools.py)
+        const ROOTS_DB = {
+            "بني": { root: "ب-ن-ي", predicate: "BUILD", confidence: 0.95 },
+            "بناء": { root: "ب-ن-ي", predicate: "BUILD", confidence: 0.95 },
+            "يبني": { root: "ب-ن-ي", predicate: "BUILD", confidence: 0.95 },
+            "بنى": { root: "ب-ن-ي", predicate: "BUILD", confidence: 0.95 },
+            "كتب": { root: "ك-ت-ب", predicate: "WRITE", confidence: 0.95 },
+            "كتابة": { root: "ك-ت-ب", predicate: "WRITE", confidence: 0.95 },
+            "كاتب": { root: "ك-ت-ب", predicate: "WRITE", confidence: 0.92 },
+            "ذكي": { root: "ذ-ك-ي", predicate: "INTELLIGENT", confidence: 0.94 },
+            "شعر": { root: "ش-ع-ر", predicate: "SENSE", confidence: 0.93 },
+            "استشعار": { root: "ش-ع-ر", predicate: "SENSE", confidence: 0.91 },
+            "حرك": { root: "ح-ر-ك", predicate: "MOVE", confidence: 0.94 },
+            "حركة": { root: "ح-ر-ك", predicate: "MOVE", confidence: 0.94 },
+            "منزل": { root: "ن-ز-ل", entity: "home", confidence: 0.96 },
+            "نظام": { root: "ن-ظ-م", entity: "system", confidence: 0.95 },
+            "تقرير": { root: "ق-ر-ر", entity: "report", confidence: 0.93 },
+            "أشخاص": { root: "ش-خ-ص", entity: "people", confidence: 0.94 },
+            "كاميرات": { root: "ك-م-ر", entity: "cameras", confidence: 0.95 }
+        };
+        
+        function processIntent() {
+            const text = document.getElementById('inputText').value.trim();
+            
+            if (!text) {
+                alert('الرجاء إدخال نص عربي!');
+                return;
+            }
+            
+            // استخراج الكلمات العربية
+            const arabicWords = text.match(/[\u0600-\u06FF]+/g) || [];
+            
+            const roots = new Set();
+            const predicates = new Set();
+            const entities = new Set();
+            const confidences = [];
+            
+            // معالجة كل كلمة
+            arabicWords.forEach(word => {
+                if (ROOTS_DB[word]) {
+                    const entry = ROOTS_DB[word];
+                    roots.add(entry.root);
+                    if (entry.predicate) predicates.add(entry.predicate);
+                    if (entry.entity) entities.add(entry.entity);
+                    confidences.push(entry.confidence);
+                }
+            });
+            
+            // حساب متوسط الثقة
+            const avgConfidence = confidences.length > 0 
+                ? (confidences.reduce((a, b) => a + b, 0) / confidences.length) 
+                : 0;
+            
+            // عرض النتائج
+            displayResults(
+                Array.from(roots),
+                Array.from(predicates),
+                Array.from(entities),
+                avgConfidence,
+                arabicWords.length
+            );
+        }
+        
+        function displayResults(roots, predicates, entities, confidence, wordCount) {
+            const resultDiv = document.getElementById('result');
+            const rootsDiv = document.getElementById('roots');
+            const predicatesDiv = document.getElementById('predicates');
+            const entitiesDiv = document.getElementById('entities');
+            const confidenceSpan = document.getElementById('confidence');
+            const wordCountSpan = document.getElementById('wordCount');
+            const apiCallsSpan = document.getElementById('apiCalls');
+            
+            // عرض الجذور
+            rootsDiv.innerHTML = roots.length > 0
+                ? roots.map(r => `<span class="root-tag">${r}</span>`).join('')
+                : '<span style="color: #888;">لم يتم العثور على جذور</span>';
+            
+            // عرض المحمولات
+            predicatesDiv.innerHTML = predicates.length > 0
+                ? predicates.map(p => `<span class="predicate-tag">${p}</span>`).join('')
+                : '<span style="color: #888;">لم يتم العثور على محمولات</span>';
+            
+            // عرض الكيانات
+            entitiesDiv.innerHTML = entities.length > 0
+                ? entities.map(e => `<span class="entity-tag">${e}</span>`).join('')
+                : '<span style="color: #888;">لم يتم العثور على كيانات</span>';
+            
+            // عرض الإحصائيات
+            confidenceSpan.textContent = `${Math.round(confidence * 100)}%`;
+            wordCountSpan.textContent = wordCount;
+            apiCallsSpan.textContent = '0 ✅'; // دائماً صفر!
+            
+            // إظهار النتائج مع animation
+            resultDiv.classList.add('show');
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function tryExample(text) {
+            document.getElementById('inputText').value = text;
+            processIntent();
+        }
+        
+        // معالجة عند الضغط على Enter
+        document.getElementById('inputText').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                processIntent();
+            }
+        });
+        
+        // معالجة تلقائية عند تحميل الصفحة
+        window.onload = function() {
+            processIntent();
+        };
+    </script>
+</body>
+</html>
