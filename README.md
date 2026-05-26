@@ -336,3 +336,35 @@ pytest tests/
 <sub>Built in Riyadh 🇸🇦 with Goose 🪿 by [@Khawrzm](https://github.com/Khawrzm)</sub>  
 <sub>**"كيس الزبالة أحسن من Big Tech"** - حكمة شعبية، 2026</sub>  
 <sub>*Compile your own reality. No cloud required.*</sub>
+
+---
+
+## 🛡️ NEW: Security Framework
+
+Version 0.3.0 introduces the **Khawrizm Security Framework** - a complete Zero Trust AI architecture for sovereign deployments.
+
+### Features
+
+- **IPI Detector**: Detects Indirect Prompt Injection attacks
+- **DLP Guardian**: Saudi-specific PII detection (Iqama, National ID)
+- **Zero Trust Validator**: Risk-based access control for AI actions
+- **CST Compliance**: Saudi Class C cloud security validation
+
+### Quick Example
+
+```python
+from security import IPIDetector, scan_for_ipi
+
+# Scan email before AI processes it
+result = scan_for_ipi(email_text, strict=True)
+
+if not result['is_safe']:
+    print(f"⚠️  Threat: {result['threat_level']}")
+    print(f"Patterns: {result['detected_patterns']}")
+    # Use sanitized version
+    safe_text = result['sanitized_text']
+```
+
+**[📖 Full Security Documentation](SECURITY_FRAMEWORK.md)**
+
+---
