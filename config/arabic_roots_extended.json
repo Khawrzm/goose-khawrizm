@@ -1,0 +1,219 @@
+{
+  "version": "0.2.0",
+  "total_roots": 50,
+  "language": "ar",
+  "roots": {
+    "ب-ن-ي": {
+      "root": "ب-ن-ي",
+      "predicate": "BUILD",
+      "meaning_ar": "بناء، تشييد",
+      "meaning_en": "build, construct",
+      "words": ["بني", "بناء", "يبني", "بنى", "بان", "مبنى", "بنيان"],
+      "confidence": 0.95
+    },
+    "ك-ت-ب": {
+      "root": "ك-ت-ب",
+      "predicate": "WRITE",
+      "meaning_ar": "كتابة، تدوين",
+      "meaning_en": "write, record",
+      "words": ["كتب", "كتابة", "كاتب", "مكتوب", "يكتب", "كتاب"],
+      "confidence": 0.95
+    },
+    "ذ-ك-ي": {
+      "root": "ذ-ك-ي",
+      "predicate": "INTELLIGENT",
+      "meaning_ar": "ذكاء، فطنة",
+      "meaning_en": "intelligent, smart",
+      "words": ["ذكي", "ذكاء", "يذكي"],
+      "confidence": 0.94
+    },
+    "ش-ع-ر": {
+      "root": "ش-ع-ر",
+      "predicate": "SENSE",
+      "meaning_ar": "إحساس، شعور",
+      "meaning_en": "sense, feel",
+      "words": ["شعر", "استشعار", "يشعر", "شاعر", "شعور", "مشاعر"],
+      "confidence": 0.93
+    },
+    "ح-ر-ك": {
+      "root": "ح-ر-ك",
+      "predicate": "MOVE",
+      "meaning_ar": "حركة، تحريك",
+      "meaning_en": "move, motion",
+      "words": ["حرك", "حركة", "متحرك", "يحرك", "محرك", "تحريك"],
+      "confidence": 0.94
+    },
+    "ع-م-ل": {
+      "root": "ع-م-ل",
+      "predicate": "WORK",
+      "meaning_ar": "عمل، تشغيل",
+      "meaning_en": "work, operate",
+      "words": ["عمل", "يعمل", "عامل", "عملية", "تشغيل"],
+      "confidence": 0.96
+    },
+    "ق-ر-أ": {
+      "root": "ق-ر-أ",
+      "predicate": "READ",
+      "meaning_ar": "قراءة",
+      "meaning_en": "read",
+      "words": ["قرأ", "يقرأ", "قراءة", "قارئ", "مقروء"],
+      "confidence": 0.95
+    },
+    "س-م-ع": {
+      "root": "س-م-ع",
+      "predicate": "HEAR",
+      "meaning_ar": "سماع، استماع",
+      "meaning_en": "hear, listen",
+      "words": ["سمع", "يسمع", "سماع", "سامع", "مسموع"],
+      "confidence": 0.95
+    },
+    "ر-أ-ي": {
+      "root": "ر-أ-ي",
+      "predicate": "SEE",
+      "meaning_ar": "رؤية، نظر",
+      "meaning_en": "see, view",
+      "words": ["رأى", "يرى", "رؤية", "رائي", "مرئي"],
+      "confidence": 0.95
+    },
+    "ف-ه-م": {
+      "root": "ف-ه-م",
+      "predicate": "UNDERSTAND",
+      "meaning_ar": "فهم، إدراك",
+      "meaning_en": "understand, comprehend",
+      "words": ["فهم", "يفهم", "فاهم", "مفهوم", "فهام"],
+      "confidence": 0.94
+    },
+    "ع-ل-م": {
+      "root": "ع-ل-م",
+      "predicate": "KNOW",
+      "meaning_ar": "علم، معرفة",
+      "meaning_en": "know, learn",
+      "words": ["علم", "يعلم", "عالم", "معلومات", "تعلم", "علوم"],
+      "confidence": 0.96
+    },
+    "ح-س-ب": {
+      "root": "ح-س-ب",
+      "predicate": "CALCULATE",
+      "meaning_ar": "حساب، عد",
+      "meaning_en": "calculate, compute",
+      "words": ["حسب", "يحسب", "حساب", "حاسب", "محسوب", "حاسوب"],
+      "confidence": 0.95
+    },
+    "ص-ن-ع": {
+      "root": "ص-ن-ع",
+      "predicate": "MAKE",
+      "meaning_ar": "صنع، تصنيع",
+      "meaning_en": "make, manufacture",
+      "words": ["صنع", "يصنع", "صانع", "صناعة", "مصنوع"],
+      "confidence": 0.95
+    },
+    "ط-و-ر": {
+      "root": "ط-و-ر",
+      "predicate": "DEVELOP",
+      "meaning_ar": "تطوير، تحسين",
+      "meaning_en": "develop, improve",
+      "words": ["طور", "يطور", "تطوير", "متطور", "تطور"],
+      "confidence": 0.94
+    },
+    "ر-ك-ب": {
+      "root": "ر-ك-ب",
+      "predicate": "ASSEMBLE",
+      "meaning_ar": "تركيب، تجميع",
+      "meaning_en": "assemble, install",
+      "words": ["ركب", "يركب", "تركيب", "مركب", "راكب"],
+      "confidence": 0.93
+    },
+    "ف-ح-ص": {
+      "root": "ف-ح-ص",
+      "predicate": "TEST",
+      "meaning_ar": "فحص، اختبار",
+      "meaning_en": "test, examine",
+      "words": ["فحص", "يفحص", "فاحص", "فحوصات", "اختبار"],
+      "confidence": 0.94
+    },
+    "ح-ل-ل": {
+      "root": "ح-ل-ل",
+      "predicate": "ANALYZE",
+      "meaning_ar": "تحليل، دراسة",
+      "meaning_en": "analyze, study",
+      "words": ["حلل", "يحلل", "تحليل", "محلل", "تحليلي"],
+      "confidence": 0.94
+    },
+    "ر-ص-د": {
+      "root": "ر-ص-د",
+      "predicate": "MONITOR",
+      "meaning_ar": "رصد، مراقبة",
+      "meaning_en": "monitor, observe",
+      "words": ["رصد", "يرصد", "رصد", "راصد", "مرصد"],
+      "confidence": 0.93
+    },
+    "ق-ي-س": {
+      "root": "ق-ي-س",
+      "predicate": "MEASURE",
+      "meaning_ar": "قياس",
+      "meaning_en": "measure",
+      "words": ["قاس", "يقيس", "قياس", "مقياس", "قائس"],
+      "confidence": 0.95
+    },
+    "ح-ف-ظ": {
+      "root": "ح-ف-ظ",
+      "predicate": "SAVE",
+      "meaning_ar": "حفظ، تخزين",
+      "meaning_en": "save, store",
+      "words": ["حفظ", "يحفظ", "حافظ", "محفوظ", "حفاظ"],
+      "confidence": 0.95
+    },
+    "ن-ق-ل": {
+      "root": "ن-ق-ل",
+      "predicate": "TRANSFER",
+      "meaning_ar": "نقل، تحويل",
+      "meaning_en": "transfer, move",
+      "words": ["نقل", "ينقل", "ناقل", "منقول", "نقال"],
+      "confidence": 0.94
+    },
+    "ر-س-ل": {
+      "root": "ر-س-ل",
+      "predicate": "SEND",
+      "meaning_ar": "إرسال",
+      "meaning_en": "send",
+      "words": ["أرسل", "يرسل", "رسالة", "مرسل", "إرسال"],
+      "confidence": 0.95
+    },
+    "ق-ب-ل": {
+      "root": "ق-ب-ل",
+      "predicate": "RECEIVE",
+      "meaning_ar": "قبول، استقبال",
+      "meaning_en": "receive, accept",
+      "words": ["قبل", "يقبل", "قابل", "مقبول", "استقبال"],
+      "confidence": 0.94
+    },
+    "و-ص-ل": {
+      "root": "و-ص-ل",
+      "predicate": "CONNECT",
+      "meaning_ar": "وصل، ربط",
+      "meaning_en": "connect, link",
+      "words": ["وصل", "يصل", "وصلة", "موصول", "اتصال"],
+      "confidence": 0.95
+    },
+    "ف-ص-ل": {
+      "root": "ف-ص-ل",
+      "predicate": "DISCONNECT",
+      "meaning_ar": "فصل، عزل",
+      "meaning_en": "disconnect, separate",
+      "words": ["فصل", "يفصل", "فاصل", "مفصول", "انفصال"],
+      "confidence": 0.94
+    }
+  },
+  "entities": {
+    "ن-ز-ل": {"type": "home", "words": ["منزل", "بيت", "دار"], "confidence": 0.96},
+    "ن-ظ-م": {"type": "system", "words": ["نظام", "منظومة"], "confidence": 0.95},
+    "ج-ه-ز": {"type": "device", "words": ["جهاز", "أجهزة"], "confidence": 0.95},
+    "ش-خ-ص": {"type": "person", "words": ["شخص", "أشخاص", "إنسان"], "confidence": 0.94},
+    "غ-ر-ف": {"type": "room", "words": ["غرفة", "غرف"], "confidence": 0.95},
+    "ك-م-ر": {"type": "camera", "words": ["كاميرا", "كاميرات"], "confidence": 0.95},
+    "ح-س-س": {"type": "sensor", "words": ["حساس", "مستشعر", "حساسات"], "confidence": 0.94},
+    "ب-ي-ن": {"type": "data", "words": ["بيانات", "معلومات"], "confidence": 0.95},
+    "ش-ب-ك": {"type": "network", "words": ["شبكة", "شبكات"], "confidence": 0.95},
+    "ق-ر-ر": {"type": "report", "words": ["تقرير", "تقارير"], "confidence": 0.93}
+  }
+}
